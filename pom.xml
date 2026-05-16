@@ -10,7 +10,7 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 
-	<groupId>com.github.hiwepy</groupId>
+	<groupId>io.github.hiwepy</groupId>
 	<artifactId>log4j2-plus-spring-boot-starter</artifactId>
 	<description>Spring Boot Starter For Log4j 2.x</description>
 	<version>2.3.x.20240823.RELEASE</version>
