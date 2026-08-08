@@ -1,6 +1,6 @@
 package org.apache.logging.log4j.spring.boot.utils;
 
-import javax.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletRequest;
 
 import org.springframework.util.StringUtils;
 
@@ -18,7 +18,7 @@ public class RemoteAddrUtils {
 	
 	/**
 	 * 获取请求客户端IP地址，支持代理服务器
-	 * @author 		： <a href="https://github.com/hiwepy">hiwepy</a>
+	 * @author [@Loong Wan](https://github.com/loong10k)
 	 * @param request {@link HttpServletRequest}
 	 * @return IP地址
 	 */
