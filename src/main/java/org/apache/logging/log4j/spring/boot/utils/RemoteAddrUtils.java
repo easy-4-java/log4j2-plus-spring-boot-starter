@@ -18,7 +18,7 @@ public class RemoteAddrUtils {
 	
 	/**
 	 * 获取请求客户端IP地址，支持代理服务器
-	 * @author 		： <a href="https://github.com/hiwepy">hiwepy</a>
+	 * @author [@Loong Wan](https://github.com/loong10k)
 	 * @param request {@link HttpServletRequest}
 	 * @return IP地址
 	 */

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017, hiwepy (https://github.com/hiwepy).
+ * Copyright (c) 2018, hiwepy (https://github.com/hiwepy).
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
@@ -13,37 +13,26 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-/**
- * 
- */
 package org.apache.logging.log4j.spring.boot.ext;
 
-import java.sql.Connection;
-import java.sql.SQLException;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 
-import javax.sql.DataSource;
+import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * TODO
+ * Unit tests for {{ @link Log4jJdbcColumnConfig }}.
+ *
  * @author [@Loong Wan](https://github.com/loong10k)
+ * @since 1.0.0
  */
-public class Log4jJdbcConnectionFactory {
+@DisplayName("Log4jJdbcColumnConfig Tests")
+class Log4jJdbcColumnConfigTest {
 
-	private static interface Singleton {
-		final Log4jJdbcConnectionFactory INSTANCE = new Log4jJdbcConnectionFactory();
-	}
-
-	private DataSource dataSource;
-
-	private Log4jJdbcConnectionFactory() {
-	}
-
-	public static void setDataSource(DataSource dataSource) throws SQLException {
-		Singleton.INSTANCE.dataSource = dataSource;
-	}
-
-	public static Connection getDatabaseConnection() throws SQLException {
-		return Singleton.INSTANCE.dataSource.getConnection();
-	}
-	
+    @Test
+    @DisplayName("Instance can be created via constructor")
+    void testInstantiation() {
+        Log4jJdbcColumnConfig instance = new Log4jJdbcColumnConfig();
+        assertThat(instance).isNotNull();
+    }
 }
